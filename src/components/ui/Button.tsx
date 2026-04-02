@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import type { ButtonHTMLAttributes } from 'react'
 
@@ -7,6 +8,7 @@ type Size = 'sm' | 'md' | 'lg'
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant
   size?: Size
+  href?: string
 }
 
 const variantClasses: Record<Variant, string> = {
@@ -22,24 +24,15 @@ const sizeClasses: Record<Size, string> = {
   lg: 'px-7 py-3.5 text-lg',
 }
 
-export function Button({
-  variant = 'primary',
-  size = 'md',
-  className,
-  children,
-  ...props
-}: ButtonProps) {
-  return (
-    <button
-      className={cn(
-        'inline-flex items-center justify-center rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed',
-        variantClasses[variant],
-        sizeClasses[size],
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </button>
+export function Button({ variant = 'primary', size = 'md', className, children, href, ...props }: ButtonProps) {
+  const classes = cn(
+    'inline-flex items-center justify-center rounded-lg font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed',
+    variantClasses[variant],
+    sizeClasses[size],
+    className
   )
+  if (href) {
+    return <Link href={href} className={classes}>{children}</Link>
+  }
+  return <button className={classes} {...props}>{children}</button>
 }
