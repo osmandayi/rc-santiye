@@ -12,8 +12,9 @@ import { ProductCard } from '@/components/catalog/ProductCard'
 import { ShoppingCart, CheckCircle } from 'lucide-react'
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const product = products.find(p => p.slug === params.slug)
-  if (!product) notFound()
+  const foundProduct = products.find(p => p.slug === params.slug)
+  if (!foundProduct) notFound()
+  const product = foundProduct!
 
   const category = categories.find(c => c.id === product.categoryId)
   const related = products.filter(p => p.categoryId === product.categoryId && p.id !== product.id).slice(0, 4)
