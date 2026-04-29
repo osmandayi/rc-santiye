@@ -29,7 +29,7 @@ export default function OrganizationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-3">Organizasyon Paketleri</h2>
           <p className="text-center text-text-muted mb-12">İhtiyacınıza uygun paketi seçin</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {servicePackages.map(pkg => <PackageCard key={pkg.id} pkg={pkg} />)}
           </div>
         </div>

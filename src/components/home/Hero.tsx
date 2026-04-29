@@ -21,7 +21,7 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" href="/catalog">Ürünleri Keşfet</Button>
-            <Button size="lg" variant="outline" href="/organization" className="border-white text-white hover:bg-white hover:text-secondary">
+            <Button size="lg" variant="outline" href="/organization" className="border-white text-white hover:bg-white/15 hover:border-white">
               Organizasyon
             </Button>
           </div>

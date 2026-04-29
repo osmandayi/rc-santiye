@@ -10,12 +10,16 @@ interface CartContextValue {
   removeItem: (productId: string) => void
   updateQuantity: (productId: string, quantity: number) => void
   clearCart: () => void
+  isDrawerOpen: boolean
+  openDrawer: () => void
+  closeDrawer: () => void
 }
 
 const CartContext = createContext<CartContextValue | null>(null)
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 
@@ -29,7 +33,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
       return [...prev, { productId, quantity: 1 }]
     })
+    setIsDrawerOpen(true)
   }
+
+  function openDrawer() { setIsDrawerOpen(true) }
+  function closeDrawer() { setIsDrawerOpen(false) }
 
   function removeItem(productId: string) {
     setItems(prev => prev.filter(i => i.productId !== productId))
@@ -46,7 +54,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <CartContext.Provider value={{ items, totalItems, addItem, removeItem, updateQuantity, clearCart }}>
+    <CartContext.Provider value={{ items, totalItems, addItem, removeItem, updateQuantity, clearCart, isDrawerOpen, openDrawer, closeDrawer }}>
       {children}
     </CartContext.Provider>
   )

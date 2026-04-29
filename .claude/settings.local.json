@@ -4,7 +4,16 @@
       "WebSearch",
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --yes)",
       "Bash(npm install:*)",
-      "Bash(timeout 120 npx next build)"
+      "Bash(timeout 120 npx next build)",
+      "Bash(ls -la tailwind*)",
+      "Bash(ls -la *.ts *.js)",
+      "Bash(npm run:*)",
+      "Bash(npx jest:*)",
+      "Bash(npm list:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npx next:*)",
+      "Bash(del:*)"
     ]
   }
 }

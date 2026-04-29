@@ -8,8 +8,8 @@ export const faqItems: FaqItem[] = [
   },
   {
     id: 'faq-2',
-    question: 'Mekânı siz mi sağlıyorsunuz?',
-    answer: 'Premium pakette mekân belirleme desteği sunuyoruz. Diğer paketlerde kendi mekânınızı temin etmeniz gerekiyor ancak dekorasyon ekibimiz her mekâna uyum sağlar.',
+    question: 'Mekanı siz mi sağlıyorsunuz?',
+    answer: 'Premium pakette mekan belirleme desteği sunuyoruz. Diğer paketlerde kendi mekanınızı temin etmeniz gerekiyor ancak dekorasyon ekibimiz her mekana uyum sağlar.',
   },
   {
     id: 'faq-3',

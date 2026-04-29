@@ -6,7 +6,7 @@ export const servicePackages: ServicePackage[] = [
     name: 'Temel Paket',
     priceRange: '₺2.500 – ₺4.000',
     features: [
-      'Mekân dekorasyonu (inşaat teması)',
+      'Mekan dekorasyonu (inşaat teması)',
       'İnşaat oyuncağı masaüstü süsler',
       '10 kişiye kadar',
       'Temalı masa örtüsü & balon',
@@ -38,7 +38,7 @@ export const servicePackages: ServicePackage[] = [
       'Sınırsız misafir',
       'Video çekim & kurgu',
       'VIP oyuncak hediye sepeti',
-      'Mekân belirleme desteği',
+      'Mekan belirleme desteği',
       'Tüm gün etkinlik',
       'Catering koordinasyonu',
       'Kişisel organizasyon danışmanı',

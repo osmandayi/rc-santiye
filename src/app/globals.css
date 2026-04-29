@@ -7,8 +7,11 @@
   --color-accent: #FCD34D;
   --color-background: #FAFAFA;
   --color-surface: #FFFFFF;
+  --color-surface-2: #F3F4F6;
+  --color-border: #E5E7EB;
   --color-text: #111827;
   --color-text-muted: #6B7280;
+  --color-text-body: #374151;
 }
 
 body {

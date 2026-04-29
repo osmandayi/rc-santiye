@@ -1,5 +1,4 @@
 import { Hero } from '@/components/home/Hero'
-import { FeaturedCategories } from '@/components/home/FeaturedCategories'
 import { ServicesSummary } from '@/components/home/ServicesSummary'
 import { FeaturedProducts } from '@/components/home/FeaturedProducts'
 import { WhyUs } from '@/components/home/WhyUs'
@@ -10,7 +9,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturedCategories />
       <ServicesSummary />
       <FeaturedProducts />
       <StatsBar />
